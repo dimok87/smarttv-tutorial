@@ -4,10 +4,10 @@ import withNavigate from "../HOC/withNavigate";
 
 class FocusableButton extends Component {
   render() {
-    const { children, isFocus } = this.props;
+    const { children, isFocus, onClick } = this.props;
     return (
       <div>
-        <Button variant={isFocus ? "contained" : "outlined"} color="primary">
+        <Button onClick={onClick} variant={isFocus ? "contained" : "outlined"} color="primary">
           { children }
         </Button>
       </div>
